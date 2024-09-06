@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Bookmarklet</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        a {
+            display: inline-block;
+            margin: 20px;
+            padding: 10px 20px;
+            background-color: #4CAF50;
+            color: white;
+            text-decoration: none;
+            border-radius: 5px;
+            font-size: 18px;
+        }
+        a:hover {
+            background-color: #45a049;
+        }
+    </style>
+</head>
+<body>
+    <a href="javascript:const e=location.href.match(/(www|staging|friedbert-preview).zeit.de\/(.*)/i);if(e){const[i,t,r]=e,n='staging'===t?'vivi.staging':'vivi';location.href=`http://${n}.zeit.de/repository/${r}/@@view.html`}else alert('Der Husch-Link funktioniert nur auf www.(staging.)zeit.de und friedbert-preview(.staging).zeit.de.');">Bookmarklet</a>
+    <p>Ziehe den Link in deine Lesenzeichenleiste</p>
+</body>
+</html>
